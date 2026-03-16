@@ -36,7 +36,6 @@ Stage::Stage()
 	itemImageSize = VECTOR2(64, 64);
 	anim = 10;
 	animY = 16;
-	
 
 	scrollX = 0;
 

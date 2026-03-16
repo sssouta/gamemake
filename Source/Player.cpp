@@ -37,8 +37,8 @@ Player::Player(VECTOR2 pos)
 	assert(hImage > 0);
 
 	imageSize = VECTOR2(64, 64);
-	anim = 0;
-	animY = 3;
+	anim = 1;
+	animY = 1;
 	animTimer = 0.0f;
 	animInterval = 0.1f;
 
