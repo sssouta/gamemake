@@ -1,6 +1,7 @@
 #pragma once
 #include "Object2D.h"
 #include <vector>
+#include "Enemy.h"
 
 class Stage : public Object2D {
 public:
@@ -43,6 +44,8 @@ private:
 	int mapWidth; 
 
 	int mapHeight; 
-	
-	
+
+	std::vector<Enemy*> enemies; 
 };
+	
+	

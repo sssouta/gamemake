@@ -59,7 +59,9 @@ Stage::Stage()
 				int px = x * imageSize.x + imageSize.x / 2.0f;
 				int py = y * imageSize.y + imageSize.y / 2.0f;
 
-				new Enemy(VECTOR2(px, py));
+				Enemy* enemy = new Enemy(VECTOR2(px, py));
+				enemies.push_back(enemy);
+			
 			}
 		}
 	}
@@ -92,6 +94,10 @@ void Stage::Draw()
 			}
 			
 		}
+	}
+
+	for (Enemy* enemy : enemies) {
+		enemy->Draw(scrollX);
 	}
 }
 
