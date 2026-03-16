@@ -3,6 +3,7 @@
 #include <vector>
 #include "Player.h"
 #include "CsvReader.h"
+#include "Enemy.h"
 
 
 
@@ -34,8 +35,10 @@ Stage::Stage()
 	hitemImage = LoadGraph("data/image/item.png");
 	assert(hitemImage > 0);
 	itemImageSize = VECTOR2(64, 64);
-	anim = 10;
-	animY = 16;
+	anim = 3;
+	animY = 1;
+
+	
 
 	scrollX = 0;
 
@@ -46,6 +49,17 @@ Stage::Stage()
 				int px = x * imageSize.x + imageSize.x / 2.0f;
 				int py = y * imageSize.y + imageSize.y / 2.0f;
 				new Player(VECTOR2(px, py));
+			}
+		}
+	}
+	for (int y = 0; y < map.size(); y++) {
+		for (int x = 0; x < map[y].size(); x++) {
+			int d = map[y][x];
+			if (d == 8) {
+				int px = x * imageSize.x + imageSize.x / 2.0f;
+				int py = y * imageSize.y + imageSize.y / 2.0f;
+
+				new Enemy(VECTOR2(px, py));
 			}
 		}
 	}

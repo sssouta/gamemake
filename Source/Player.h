@@ -22,6 +22,8 @@ private:
 	float JumpHeight;
 	float JumpV0;
 	float moveSpeed;
+	float hp;
+	float maxHp;
 	float animTimer;         // アニメーション時間用タイマー
 	float animInterval;      // フレームの切り替え間隔（秒）
 	int prevTime = GetNowCount();

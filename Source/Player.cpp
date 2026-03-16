@@ -25,11 +25,16 @@ Player::Player(VECTOR2 pos)
 		}
 		else if (tag == "JumpHeight") {
 			JumpHeight = csv->GetFloat(i, 1);
-			
-        }
+
+		}
 		else if (tag == "MoveSpeed") {
 			moveSpeed = csv->GetFloat(i, 1);
 		}
+		else if (tag == "HP") {
+			maxHp = csv->GetFloat(i, 1);
+			hp = maxHp;
+		}
+	
 	}
 	JumpV0 = -sqrtf(2.0f * Gravity * JumpHeight);
 
@@ -242,7 +247,13 @@ void Player::Draw()
 		(int)(position.y - imageSize.y / 2),        // 描画Y
 		srcX, srcY,                                 // 元画像の切り取り位置
 		(int)imageSize.x, (int)imageSize.y,         // 切り取るサイズ
-		hImage, TRUE);                    
+		hImage, TRUE);       
+	{
+		float hpRate = hp / maxHp;
+
+		DrawBox(50, 50, 50 + 200 * hpRate, 70, GetColor(255, 0, 0), TRUE); // HP
+		DrawBox(50, 50, 250, 70, GetColor(255, 255, 255), FALSE); // 枠
+	}
 	
 }
 

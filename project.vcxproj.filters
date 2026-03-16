@@ -71,6 +71,9 @@
     <ClCompile Include="Source\GameClearScene.cpp">
       <Filter>ResultScene</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Enemy.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Screen.h" />
@@ -153,6 +156,9 @@
     </ClInclude>
     <ClInclude Include="Source\GameClearScene.h">
       <Filter>ResultScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Enemy.h">
+      <Filter>Library</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
