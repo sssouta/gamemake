@@ -79,23 +79,28 @@ void Stage::Draw()
 	
 	for (int y = 0; y < map.size(); y++) {
 		for (int x = 0; x < map[y].size(); x++) {
+
 			int c = map[y][x];
+
 			if (c == 1) {
 				DrawRectGraph(x * w - scrollX, y * h, 3 * w, 1 * h, w, h, hImage, TRUE);
 			}
 			else if (c == 2) {
 				DrawRectGraph(x * w - scrollX, y * h, 0 * w, 1 * h, w, h, hImage, TRUE);
 			}
+			else if (c == 9) {  // ©’Ç‰Á
+				DrawRectGraph(x * w - scrollX, y * h, 0 * w, 2 * h, w, h, hImage, TRUE);
+			}
 			else if (c >= 10 && c <= 21) {
+
 				int chipIndex = c - 10;
 				int col = chipIndex % 4;
 				int row = chipIndex / 4;
+
 				DrawRectGraph(x * w - scrollX, y * h, col * w, row * h, w, h, hitemImage, TRUE);
 			}
-			
 		}
 	}
-
 	for (Enemy* enemy : enemies) {
 		enemy->Draw(scrollX);
 	}

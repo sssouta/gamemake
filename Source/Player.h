@@ -27,7 +27,7 @@ private:
 	float animTimer;         // アニメーション時間用タイマー
 	float animInterval;      // フレームの切り替え間隔（秒）
 	int prevTime = GetNowCount();
-	
+	int damageTimer = 0;
 
 	
 	

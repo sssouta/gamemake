@@ -30,7 +30,7 @@ public:
 	virtual ~Object2D();
 	virtual void Update() override;
 	virtual void Draw() override;
-	VECTOR2 GetPosition() { return position; }
+	VECTOR2 GetPosition() { return position; }// ˆÊ’u‚ğ•Ô‚·
 protected:
 	int hImage; // ‰æ‘œ‚ğ“Ç‚Ş‚½‚ß
 	int anim; // ŠG‚ÌêŠ
